@@ -1,6 +1,6 @@
 {
   "name": "ffc-sfi-api-gateway",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "SFI Api Gateway for connecting to Crown Hosting",
   "homepage": "https://github.com/DEFRA/ffc-sfi-api-gateway",
   "main": "app/index.js",
