@@ -1,0 +1,8 @@
+{{- include "ffc-helm-library.deployment" (list . "ffc-sfi-api-gateway.deployment") -}}
+{{- define "ffc-sfi-api-gateway.deployment" -}}
+spec:
+  template:
+    spec:
+      containers:
+      - {{ include "ffc-helm-library.container" (list . "ffc-sfi-api-gateway.container") }}
+{{- end -}}
