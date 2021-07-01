@@ -1,9 +1,17 @@
 const wreck = require('@hapi/wreck')
+const joi = require('joi')
 const { chApiId, chApiKey } = require('../config')
 
 module.exports = {
   method: 'GET',
   path: '/organisation/search/sbi/{sbi}',
+  options: {
+    validate: {
+      params: joi.object({
+        sbi: joi.string().min(9).max(9)
+      })
+    }
+  },
   handler: (request, h) => {
     return h.proxy({
       mapUri: (req) => {
