@@ -1,6 +1,6 @@
 const wreck = require('@hapi/wreck')
 const joi = require('joi')
-const { chApiId, chApiKey } = require('../config')
+const { chApi, chApiId, chApiKey } = require('../config')
 
 module.exports = {
   method: 'GET',
@@ -20,8 +20,7 @@ module.exports = {
       mapUri: (req) => {
         const sbi = request.params.sbi ? request.params.sbi : ''
         return {
-          uri: `https://azureapi-chs-horizon.ruraldev.org.uk/extapi/organisation/search/sbi/?sbi=${sbi}`,
-          // uri: `https://gorest.co.in/public-api/users/${sbi}`,
+          uri: `${chApi}organisation/search/sbi/?sbi=${sbi}`,
           headers: {
             'api-id': chApiId,
             'api-key': chApiKey
@@ -30,7 +29,7 @@ module.exports = {
           xforward: true
         }
       },
-      onResponse: async (err, res, r, h, settings, ttl) => {
+      onResponse: async (err, res) => {
         console.log(err)
         const payload = await wreck.read(res, { json: true })
         const response = h.response(payload)

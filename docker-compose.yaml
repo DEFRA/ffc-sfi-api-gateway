@@ -10,5 +10,6 @@ services:
     environment: 
       APPINSIGHTS_CLOUDROLE: ffc-sfi-crown-hosting-prototype
       APPINSIGHTS_INSTRUMENTATIONKEY: ${APPINSIGHTS_INSTRUMENTATIONKEY}
+      CH_API: ${CH_API},
       CH_API_ID: ${CH_API_ID},
       CH_API_KEY: ${CH_API_KEY}
