@@ -11,7 +11,7 @@ const responseModel = joi.array().items(joi.object({
   lastUpdatedOn: joi.string()
 })).label('Result')
 
-module.exports ={
+module.exports = {
   method: 'GET',
   path: '/organisation/search/sbi/{sbi}',
   options: {
