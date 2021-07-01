@@ -1,22 +1,9 @@
 const wreck = require('@hapi/wreck')
-const joi = require('joi')
 const { chApiId, chApiKey } = require('../config')
 
 module.exports = {
   method: 'GET',
   path: '/organisation/search/sbi/{sbi}',
-  options: {
-    description: 'Get get organisation by Single Business Identifier (SBI)',
-    notes: 'Returns organisation details by the SBI passed in the path',
-    tags: ['api'],
-    validate: {
-      params: joi.object({
-        sbi: joi.number()
-          .required()
-          .description('the id for the todo item')
-      })
-    }
-  },
   handler: (request, h) => {
     return h.proxy({
       mapUri: (req) => {
