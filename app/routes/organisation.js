@@ -10,7 +10,7 @@ module.exports = {
         const sbi = request.params.sbi ? request.params.sbi : ''
         return {
           uri: `https://azureapi-chs-horizon.ruraldev.org.uk/extapi/organisation/search/sbi/?sbi=${sbi}`,
-          // uri: 'https://gorest.co.in/public-api/users/32' + query,
+          // uri: `https://gorest.co.in/public-api/users/${sbi}`,
           headers: {
             'api-id': chApiId,
             'api-key': chApiKey
