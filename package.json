@@ -5,7 +5,7 @@
   "homepage": "https://github.com/DEFRA/ffc-sfi-api-gateway",
   "main": "app/index.js",
   "scripts": {
-    "test": "jest --runInBand",
+    "test": "snyk test && jest --runInBand",
     "test:watch": "jest --coverage=false --onlyChanged --watch --runInBand",
     "start:watch": "nodemon --inspect=0.0.0.0 --ext js --legacy-watch app/index.js"
   },
@@ -23,13 +23,15 @@
     "@hapi/wreck": "^17.1.0",
     "applicationinsights": "^1.8.10",
     "blipp": "^4.0.2",
-    "joi": "^17.4.0"
+    "joi": "^17.4.0",
+    "hapi-swagger": "^14.2.1"
   },
   "devDependencies": {
     "jest": "^26.4.0",
     "jest-junit": "^11.1.0",
     "nodemon": "^2.0.4",
-    "standard": "^14.3.4"
+    "standard": "^14.3.4",
+    "snyk": "^1.652.0"
   },
   "standard": {
     "globals": [

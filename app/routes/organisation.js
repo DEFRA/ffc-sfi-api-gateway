@@ -6,6 +6,9 @@ module.exports = {
   method: 'GET',
   path: '/organisation/search/sbi/{sbi}',
   options: {
+    description: 'Get organisation details',
+    notes: 'Returns organisation details by the sbi passed in the path',
+    tags: ['api'],
     validate: {
       params: joi.object({
         sbi: joi.string().min(9).max(9)
