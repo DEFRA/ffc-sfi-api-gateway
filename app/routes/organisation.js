@@ -2,15 +2,6 @@ const wreck = require('@hapi/wreck')
 const joi = require('joi')
 const { chApi, chApiId, chApiKey } = require('../config')
 
-const responseModel = joi.object({
-  id: joi.string(),
-  name: joi.string(),
-  sbi: joi.number(),
-  additionalSbiIds: joi.array().items(joi.number()),
-  confirmed: joi.boolean(),
-  lastUpdatedOn: joi.string()
-}).label('Result')
-
 module.exports = {
   method: 'GET',
   path: '/organisation/search/sbi/{sbi}',
@@ -22,8 +13,7 @@ module.exports = {
       params: joi.object({
         sbi: joi.string().length(9)
       })
-    },
-    response: { schema: responseModel }
+    }
   },
   handler: (request, h) => {
     return h.proxy({
