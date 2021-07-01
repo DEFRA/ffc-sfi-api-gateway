@@ -18,12 +18,27 @@ async function createServer () {
     }
   })
 
+  const swaggerOptions = {
+    info: {
+      title: 'Test API Documentation',
+      version: '1.0.1'
+    }
+  }
+
   // Register the plugins
   await server.register(require('@hapi/inert'))
   await server.register(H2o2)
   await server.register(require('./plugins/router'))
   await server.register(require('blipp'))
   await server.register(require('./plugins/logging'))
+  await server.register([
+    require('@hapi/inert'),
+    require('@hapi/vision'),
+    {
+      plugin: require('hapi-swagger'),
+      options: swaggerOptions
+    }
+  ])
 
   return server
 }
