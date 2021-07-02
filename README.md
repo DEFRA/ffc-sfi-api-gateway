@@ -1,6 +1,6 @@
 # FFC SFI Api Gateway
 
-Api Dateway for use with Crown Hosting Api's.
+Api Gateway for use with Crown Hosting Api's.
 
 ## Prerequisites
 - Docker
