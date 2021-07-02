@@ -4,7 +4,7 @@ const { chApi, chApiId, chApiKey } = require('../config')
 
 module.exports = {
   method: 'GET',
-  path: '/organisation/search/sbi/{sbi}',
+  path: '/organisation/search/{sbi}',
   options: {
     description: 'Get organisation details',
     notes: 'Returns organisation details by the sbi passed in the path',

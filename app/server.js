@@ -20,7 +20,7 @@ async function createServer () {
 
   const swaggerOptions = {
     info: {
-      title: 'Test API Documentation',
+      title: 'SFI Crown Hosting API Gateway Documentation',
       version: '1.0.1'
     }
   }
