@@ -1,0 +1,57 @@
+environment: development
+name: ffc-sfi-api-gateway
+namespace: ffc-sfi
+workstream: ffc-sfi
+image: ffc-sfi-api-gateway
+
+labels: {}
+
+appInsights:
+  key:
+
+containerConfigMap:
+  name: ffc-sfi-api-gateway-config-map
+
+containerSecret:
+  name: ffc-sfi-api-gateway-container-secret
+  type: Opaque
+
+service:
+  port: 80
+  type: ClusterIP
+
+deployment:
+  restartPolicy: Always
+  priorityClassName: default
+  replicas: 1
+  minReadySeconds: 0
+
+container:
+  imagePullPolicy: Always
+  requestMemory: 5Mi
+  requestCpu: 5m
+  limitMemory: 40Mi
+  limitCpu: 40m
+  port: 3005
+  chApi:
+  chApiId:
+  chApiKey:
+
+ingress:
+  class: nginx
+  endpoint: ffc-sfi-api-gateway
+  server: example.com
+
+livenessProbe:
+  path: /healthz
+  port: 3005
+  initialDelaySeconds: 10
+  periodSeconds: 10
+  failureThreshold: 3
+
+readinessProbe:
+  path: /healthy
+  port: 3005
+  initialDelaySeconds: 10
+  periodSeconds: 10
+  failureThreshold: 3

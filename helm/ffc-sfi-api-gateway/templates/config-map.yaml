@@ -1,0 +1,9 @@
+{{- include "ffc-helm-library.container-config-map" (list . "ffc-sfi-api-gateway.config-map") -}}
+{{- define "ffc-sfi-api-gateway.config-map" -}}
+data:
+  NODE_ENV: {{ quote .Values.environment }}
+  PORT: {{ quote .Values.container.port }}
+  APPINSIGHTS_CLOUDROLE: {{ quote .Values.name }}
+  CH_API_ID: {{ quote .Values.container.chApiId }}
+  CH_API: {{ quote .Values.container.chApi }}
+{{- end -}}
