@@ -31,7 +31,7 @@ const proxyCall = (request, h) => {
   return {
     mapUri: (req) => {
       return {
-        uri: `${chApi.replace(',', '')}${request.path}`,
+        uri: `${chApi}${request.path}`,
         headers: {
           'api-id': chApiId,
           'api-key': chApiKey
