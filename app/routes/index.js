@@ -30,8 +30,10 @@ module.exports = [{
 const proxyCall = (request, h) => {
   return {
     mapUri: (req) => {
+      const query = request.url.search ? request.url.search : ''
+      console.log(`${chApi}${request.path}${query}`)
       return {
-        uri: `${chApi}${request.path}`,
+        uri: `${chApi}${request.path}${query}`,
         headers: {
           'api-id': chApiId,
           'api-key': chApiKey
