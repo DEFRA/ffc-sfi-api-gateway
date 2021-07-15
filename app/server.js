@@ -34,10 +34,14 @@ async function createServer () {
     }
   ])
 
+  const router = config.useMock
+    ? require('./plugins/mock-router')
+    : require('./plugins/router')
+
   // Register the plugins
   await server.register(require('@hapi/inert'))
   await server.register(H2o2)
-  await server.register(require('./plugins/router'))
+  await server.register(router)
   await server.register(require('blipp'))
   await server.register(require('./plugins/logging'))
 

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "SP89858277",
+    "info": [
+      {
+        "code": "110",
+        "name": "Arable Land",
+        "area": 0
+      },
+      {
+        "code": "130",
+        "name": "Permanent Grassland",
+        "area": 18205.66
+      },
+      {
+        "code": "140",
+        "name": "Permanent Crops",
+        "area": 0
+      }
+    ]
+  },
+  {
+    "id": "SP94790149",
+    "info": [
+      {
+        "code": "110",
+        "name": "Arable Land",
+        "area": 0
+      },
+      {
+        "code": "130",
+        "name": "Permanent Grassland",
+        "area": 59607.48
+      },
+      {
+        "code": "140",
+        "name": "Permanent Crops",
+        "area": 0
+      }
+    ]
+  },
+  {
+    "id": "SP94792202",
+    "info": [
+      {
+        "code": "110",
+        "name": "Arable Land",
+        "area": 33046.26
+      },
+      {
+        "code": "130",
+        "name": "Permanent Grassland",
+        "area": 0
+      },
+      {
+        "code": "140",
+        "name": "Permanent Crops",
+        "area": 0
+      }
+    ]
+  }
+]

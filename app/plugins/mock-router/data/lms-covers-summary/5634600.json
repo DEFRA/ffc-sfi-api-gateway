@@ -1,0 +1,17 @@
+[
+  {
+    "code": "110",
+    "name": "Arable Land",
+    "area": 285905.71
+  },
+  {
+    "code": "130",
+    "name": "Permanent Grassland",
+    "area": 256931.76
+  },
+  {
+    "code": "140",
+    "name": "Permanent Crops",
+    "area": 0
+  }
+]

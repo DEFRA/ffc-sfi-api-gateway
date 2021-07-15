@@ -1,0 +1,37 @@
+{
+  "_data": [
+    {
+      "id": 5842651,
+      "name": "Miau Farm",
+      "sbi": 200594171,
+      "additionalSbiIds": [],
+      "confirmed": true,
+      "lastUpdatedOn": null,
+      "landConfirmed": null,
+      "deactivated": false,
+      "locked": false,
+      "unreadNotificationCount": 1,
+      "readNotificationCount": 0
+    },
+    {
+      "id": 5841191,
+      "name": "Morris Farm",
+      "sbi": 200593579,
+      "additionalSbiIds": [],
+      "confirmed": true,
+      "lastUpdatedOn": null,
+      "landConfirmed": null,
+      "deactivated": false,
+      "locked": false,
+      "unreadNotificationCount": 11,
+      "readNotificationCount": 5
+    }
+  ],
+  "_page": {
+    "number": 1,
+    "size": 20,
+    "totalPages": 1,
+    "numberOfElements": 2,
+    "totalElements": 2
+  }
+}

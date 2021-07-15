@@ -1,0 +1,42 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": 8791867,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              489760.732,
+              285733.988
+            ],
+            [
+              489751.643,
+              285737.084
+            ],
+            [
+              489750.788,
+              285734.574
+            ],
+            [
+              489759.877,
+              285731.478
+            ],
+            [
+              489760.732,
+              285733.988
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "area": "25.46",
+        "code": "371",
+        "name": "Farm Building",
+        "isBpsEligible": "false"
+      },
+      "type": "Feature"
+    }
+  ]
+}

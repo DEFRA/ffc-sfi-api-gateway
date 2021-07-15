@@ -33,6 +33,7 @@ container:
   limitMemory: 40Mi
   limitCpu: 40m
   port: 3005
+  useMock: false
   chApi:
   chApiId:
   chApiKey:
