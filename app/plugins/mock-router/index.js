@@ -116,7 +116,11 @@ module.exports = {
   plugin: {
     name: 'mock-router',
     register: (server, options) => {
-      server.route(routes)
+      server.route([].concat(
+        routes,
+        require('../../routes/healthy'),
+        require('../../routes/healthz')
+      ))
     }
   }
 }
