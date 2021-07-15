@@ -1,0 +1,32 @@
+{
+  "data": {
+    "personRoles": [
+      {
+        "personId": 5841190,
+        "role": "Owner or Sole Trader"
+      }
+    ],
+    "personPrivileges": [
+      {
+        "personId": 5841190,
+        "privilegeNames": [
+          "Full permission - business"
+        ]
+      },
+      {
+        "personId": 5841190,
+        "privilegeNames": [
+          "AMEND - CS APP - SA"
+        ]
+      },
+      {
+        "personId": 5841190,
+        "privilegeNames": [
+          "VIEW - CS AGREE - SA"
+        ]
+      }
+    ]
+  },
+  "success": true,
+  "errorString": null
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 6302309,
+    "sheetId": "SJ5236",
+    "parcelId": "8918",
+    "area": 82048.2,
+    "pendingDigitisation": false
+  },
+  {
+    "id": 1694500,
+    "sheetId": "SJ5336",
+    "parcelId": "0708",
+    "area": 18260.15,
+    "pendingDigitisation": false
+  },
+  {
+    "id": 4741975,
+    "sheetId": "SJ5335",
+    "parcelId": "3388",
+    "area": 54404.46,
+    "pendingDigitisation": false
+  },
+  {
+    "id": 6055004,
+    "sheetId": "SJ5336",
+    "parcelId": "1962",
+    "area": 82742.56,
+    "pendingDigitisation": false
+  },
+  {
+    "id": 4498670,
+    "sheetId": "SJ5336",
+    "parcelId": "3840",
+    "area": 6787.7,
+    "pendingDigitisation": false
+  }
+]
