@@ -18,7 +18,7 @@ const abacoEmpoweredSbis = require('./data/abaco-empowered-sbis/response.json')
 const routes = [
   {
     method: 'post',
-    path: '/users/{customerReference}/authentication-attempt',
+    path: '/external-auth/users/{customerReference}/authentication-attempt',
     handler: () => {
       return authenticationAttemptOk
     },
