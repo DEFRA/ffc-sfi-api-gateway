@@ -116,7 +116,7 @@ const routes = [
   },
   {
     method: 'post',
-    path: '/abaco/v1/sfi/applications',
+    path: '/api/v1/sfi/applications',
     handler: () => {
       return abacoApplications
     },
@@ -131,21 +131,21 @@ const routes = [
   },
   {
     method: 'get',
-    path: '/abaco/v1/sfi/eligibility/{sbi}',
+    path: '/api/v1/sfi/eligibility/{sbi}',
     handler: () => {
       return abacoSfiEligibility
     }
   },
   {
     method: 'get',
-    path: '/abaco/v1/sfi/eligibility/{sbi}/parcels',
+    path: '/api/v1/sfi/eligibility/{sbi}/parcels',
     handler: () => {
       return abacoSfiEligibilityParcels
     }
   },
   {
     method: 'get',
-    path: '/abaco/v1/sfi/empowered-sbis/{crn}',
+    path: '/api/v1/sfi/empowered-sbis/{crn}',
     handler: () => {
       return abacoEmpoweredSbis
     }
