@@ -10,11 +10,15 @@ const lmsLandCoversWithGeo = require('./data/lms-land-covers-with-geo/5376393__S
 const lmsCoversSummary = require('./data/lms-covers-summary/5634600.json')
 const saAuth = require('./data/sa-authorisation/5841191.json')
 const saOrg = require('./data/sa-org/5841191.json')
+const abacoApplications = require('./data/abaco-applications/response.json')
+const abacoSfiEligibility = require('./data/abaco-sfi-eligibility/response.json')
+const abacoSfiEligibilityParcels = require('./data/abaco-sfi-eligibility-parcels/response.json')
+const abacoEmpoweredSbis = require('./data/abaco-empowered-sbis/response.json')
 
 const routes = [
   {
     method: 'post',
-    path: '/users/{customerReference}/authentication-attempt',
+    path: '/external-auth/users/{customerReference}/authentication-attempt',
     handler: () => {
       return authenticationAttemptOk
     },
@@ -108,6 +112,42 @@ const routes = [
           functions: joi.string().allow('viewBusinessDetails').required()
         }).required()
       }
+    }
+  },
+  {
+    method: 'post',
+    path: '/api/v1/sfi/applications',
+    handler: () => {
+      return abacoApplications
+    },
+    options: {
+      validate: {
+        payload: joi.object().keys({
+          sbi: joi.string().required(),
+          applicationType: joi.string().required()
+        }).required()
+      }
+    }
+  },
+  {
+    method: 'get',
+    path: '/api/v1/sfi/eligibility/{sbi}',
+    handler: () => {
+      return abacoSfiEligibility
+    }
+  },
+  {
+    method: 'get',
+    path: '/api/v1/sfi/eligibility/{sbi}/parcels',
+    handler: () => {
+      return abacoSfiEligibilityParcels
+    }
+  },
+  {
+    method: 'get',
+    path: '/api/v1/sfi/empowered-sbis/{crn}',
+    handler: () => {
+      return abacoEmpoweredSbis
     }
   }
 ]
