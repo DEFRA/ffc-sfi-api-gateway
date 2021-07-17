@@ -36,6 +36,7 @@ const proxyCall = () => {
       console.log(req)
       console.log('==========')
       console.log(req.headers)
+      console.log('=========='
 
       return {
         uri: `${chApi}${req.path}${query}`,
@@ -47,10 +48,7 @@ const proxyCall = () => {
         xforward: true
       }
     },
-    onResponse: async (err, res) => {
-      if (err) {
-        console.log(`Error: ${err}`)
-      }
+    onResponse: async (err, res, req, h) => {
       const payload = await wreck.read(res, { json: true })
       const response = h.response(payload)
       response.headers = res.headers
