@@ -43,7 +43,7 @@ async function createServer () {
   await server.register(H2o2)
   await server.register(router)
   await server.register(require('blipp'))
-  await server.register(require('./plugins/logging'))
+  // await server.register(require('./plugins/logging'))
 
   return server
 }
