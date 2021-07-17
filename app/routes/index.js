@@ -10,7 +10,7 @@ const proxyCall = () => {
         headers: {
           'api-id': chApiId,
           'api-key': chApiKey,
-          'usertype': 'external'
+          userType: 'external'
         }
       }
     },
