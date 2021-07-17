@@ -44,6 +44,7 @@ const proxyCall = () => {
       const response = h.response(payload)
       response.headers = res.headers
       return response
-    }
+    },
+    passThrough: true
   }
 }
