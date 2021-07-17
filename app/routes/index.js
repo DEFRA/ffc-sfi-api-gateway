@@ -31,21 +31,12 @@ const proxyCall = () => {
   return {
     mapUri: (req) => {
       const query = req.url.search ? req.url.search : ''
-      console.log(`Query: ${query}`)
-      console.log('==========')
-      console.log(req)
-      console.log('==========')
-      console.log(req.headers)
-      console.log('==========')
-
       return {
         uri: `${chApi}${req.path}${query}`,
         headers: {
           'api-id': chApiId,
           'api-key': chApiKey
-        },
-        passThrough: true,
-        xforward: true
+        }
       }
     },
     onResponse: async (err, res, req, h) => {
