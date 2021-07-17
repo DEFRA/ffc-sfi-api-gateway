@@ -9,8 +9,8 @@ module.exports = [{
     notes: 'Returns data from Crown Hosting endpoint',
     tags: ['api']
   },
-  handler: (request, h) => {
-    return h.proxy(proxyCall(request, h))
+  handler: {
+    proxy: proxyCall()
   }
 },
 {
@@ -22,8 +22,8 @@ module.exports = [{
     tags: ['api'],
     payload: { parse: false }
   },
-  handler: (request, h) => {
-    return h.proxy(proxyCall())
+  handler: {
+    proxy: proxyCall()
   }
 }]
 
@@ -35,7 +35,8 @@ const proxyCall = () => {
         uri: `${chApi}${req.path}${query}`,
         headers: {
           'api-id': chApiId,
-          'api-key': chApiKey
+          'api-key': chApiKey,
+          'usertype': 'external'
         }
       }
     },
