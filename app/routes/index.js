@@ -23,14 +23,20 @@ module.exports = [{
     payload: { parse: false }
   },
   handler: (request, h) => {
-    return h.proxy(proxyCall(request, h))
+    return h.proxy(proxyCall())
   }
 }]
 
-const proxyCall = (request, h) => {
+const proxyCall = () => {
   return {
     mapUri: (req) => {
-      const query = request.url.search ? request.url.search : ''
+      const query = req.url.search ? req.url.search : ''
+      console.log(`Query: ${query}`)
+      console.log('==========')
+      console.log(req)
+      console.log('==========')
+      console.log(req.headers)
+
       return {
         uri: `${chApi}${request.path}${query}`,
         headers: {
@@ -42,7 +48,9 @@ const proxyCall = (request, h) => {
       }
     },
     onResponse: async (err, res) => {
-      console.log(err)
+      if (err) {
+        console.log(`Error: ${err}`)
+      }
       const payload = await wreck.read(res, { json: true })
       const response = h.response(payload)
       response.headers = res.headers
