@@ -36,7 +36,7 @@ const proxyCall = () => {
       console.log(req)
       console.log('==========')
       console.log(req.headers)
-      console.log('=========='
+      console.log('==========')
 
       return {
         uri: `${chApi}${req.path}${query}`,
