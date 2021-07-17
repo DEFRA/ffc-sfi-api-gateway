@@ -38,7 +38,7 @@ const proxyCall = () => {
       console.log(req.headers)
 
       return {
-        uri: `${chApi}${request.path}${query}`,
+        uri: `${chApi}${req.path}${query}`,
         headers: {
           'api-id': chApiId,
           'api-key': chApiKey
