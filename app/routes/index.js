@@ -20,6 +20,8 @@ const proxyCall = () => {
       const payload = await wreck.read(res, { json: true })
       const response = h.response(payload)
       response.headers = res.headers
+      console.log('RESPONSE HEADERS:')
+      console.log(response.headers)
       return response
     }
   }
