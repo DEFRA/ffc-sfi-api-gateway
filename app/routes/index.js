@@ -49,5 +49,18 @@ module.exports = [
     handler: {
       proxy: proxyCall()
     }
+  },
+  {
+    method: 'PUT',
+    path: '/{path*}',
+    options: {
+      description: 'Put calls on Crown Hosting endpoints',
+      notes: 'Returns data from Crown Hosting endpoint',
+      tags: ['api'],
+      payload: { parse: false }
+    },
+    handler: {
+      proxy: proxyCall()
+    }
   }
 ]
