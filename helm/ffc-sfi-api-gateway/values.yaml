@@ -22,16 +22,20 @@ service:
 
 deployment:
   restartPolicy: Always
-  priorityClassName: default
+  priorityClassName: high
   replicas: 1
+  minReplicas: 2
+  maxReplicas: 4
+  cpuThreshold: 80
+  memoryThreshold: 80
   minReadySeconds: 0
 
 container:
   imagePullPolicy: Always
-  requestMemory: 5Mi
-  requestCpu: 5m
-  limitMemory: 40Mi
-  limitCpu: 40m
+  requestMemory: 80Mi
+  requestCpu: 80m
+  limitMemory: 120Mi
+  limitCpu: 120m
   port: 3005
   useMock: false
   chApi:
