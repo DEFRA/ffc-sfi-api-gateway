@@ -1,6 +1,6 @@
 {
   "data": {
-    "viewBusinessDetails": true
+    "submitELMApplications": true
   },
   "success": true,
   "errorString": null
