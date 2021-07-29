@@ -105,13 +105,6 @@ const routes = [
     path: '/SitiAgriApi/authorisation/organisation/{organisationId}/byFunction',
     handler: () => {
       return saOrg
-    },
-    options: {
-      validate: {
-        query: joi.object().keys({
-          functions: joi.string().allow('viewBusinessDetails').required()
-        }).required()
-      }
     }
   },
   {
