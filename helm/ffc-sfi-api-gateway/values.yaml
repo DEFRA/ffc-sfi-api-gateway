@@ -23,9 +23,9 @@ service:
 deployment:
   restartPolicy: Always
   priorityClassName: high
-  replicas: 1
-  minReplicas: 2
-  maxReplicas: 4
+  replicas: 10
+  minReplicas: 10
+  maxReplicas: 10
   cpuThreshold: 80
   memoryThreshold: 80
   minReadySeconds: 0
