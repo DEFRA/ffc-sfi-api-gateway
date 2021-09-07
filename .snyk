@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.19.0
+version: v1.22.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   SNYK-JS-VALIDATOR-1090599:
@@ -7,23 +7,23 @@ ignore:
         reason: >-
           There is a fix to the validator.js, but it has yet to be pulled
           through to happi-swagger
-        expires: '2021-07-31T08:17:43.104Z'
+        expires: '2021-10-07T11:01:03.695Z'
   SNYK-JS-VALIDATOR-1090600:
     - hapi-swagger > swagger-parser > z-schema > validator:
         reason: >-
           There is a fix to the validator.js, but it has yet to be pulled
           through to happi-swagger
-        expires: '2021-07-31T08:17:43.104Z'
+        expires: '2021-10-07T11:01:03.695Z'
   SNYK-JS-VALIDATOR-1090601:
     - hapi-swagger > swagger-parser > z-schema > validator:
         reason: >-
           There is a fix to the validator.js, but it has yet to be pulled
           through to happi-swagger
-        expires: '2021-07-31T08:17:43.104Z'
+        expires: '2021-10-07T11:01:03.695Z'
   SNYK-JS-VALIDATOR-1090602:
     - hapi-swagger > swagger-parser > z-schema > validator:
         reason: >-
           There is a fix to the validator.js, but it has yet to be pulled
           through to happi-swagger
-        expires: '2021-07-31T08:17:43.104Z'
+        expires: '2021-10-07T11:01:03.695Z'
 patch: {}

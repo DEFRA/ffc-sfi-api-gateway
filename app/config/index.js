@@ -6,5 +6,6 @@ module.exports = {
   useMock: process.env.USE_MOCK === 'true',
   chApi: process.env.CH_API,
   chApiId: process.env.CH_API_ID,
-  chApiKey: process.env.CH_API_KEY
+  chApiKey: process.env.CH_API_KEY,
+  isDev: process.env.NODE_ENV === 'development'
 }
