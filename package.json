@@ -13,9 +13,6 @@
   "contributors": [],
   "license": "OGL-UK-3.0",
   "dependencies": {
-    "@hapi/good": "^9.0.1",
-    "@hapi/good-console": "^9.0.1",
-    "@hapi/good-squeeze": "^6.0.0",
     "@hapi/h2o2": "^9.1.0",
     "@hapi/hapi": "^20.0.0",
     "@hapi/inert": "^6.0.3",
@@ -23,15 +20,15 @@
     "@hapi/wreck": "^17.1.0",
     "applicationinsights": "^1.8.10",
     "blipp": "^4.0.2",
-    "joi": "^17.4.0",
-    "hapi-swagger": "^14.2.1"
+    "hapi-pino": "^8.3.0",
+    "hapi-swagger": "^14.2.1",
+    "joi": "^17.4.0"
   },
   "devDependencies": {
     "jest": "^26.4.0",
     "jest-junit": "^11.1.0",
     "nodemon": "^2.0.4",
-    "standard": "^14.3.4",
-    "snyk": "^1.652.0"
+    "standard": "^14.3.4"
   },
   "standard": {
     "globals": [
