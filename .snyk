@@ -26,4 +26,8 @@ ignore:
           There is a fix to the validator.js, but it has yet to be pulled
           through to happi-swagger
         expires: '2021-10-07T11:01:03.695Z'
+  SNYK-JS-ANSIREGEX-1583908:
+    - blipp > easy-table > ansi-regex:
+        reason: 'No fix, only used in Sandpit'
+        expires: '2021-10-24T13:47:03.929Z'
 patch: {}
