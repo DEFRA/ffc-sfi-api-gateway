@@ -50,7 +50,7 @@ compose() {
   compose build
 
   # Run tests
-  compose run ${service} ${command}
+  compose run --rm ${service} ${command}
 
   # Clean up
   compose down -v
