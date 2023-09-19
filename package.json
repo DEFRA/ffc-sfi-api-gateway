@@ -1,6 +1,6 @@
 {
   "name": "ffc-sfi-api-gateway",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "SFI Api Gateway for connecting to Crown Hosting",
   "homepage": "https://github.com/DEFRA/ffc-sfi-api-gateway",
   "main": "app/index.js",
@@ -10,7 +10,9 @@
     "start:watch": "nodemon --inspect=0.0.0.0 --ext js --legacy-watch app/index.js"
   },
   "author": "Defra",
-  "contributors": [],
+  "contributors": [
+    "John Watson john.watson1@defra.gov.uk"
+  ],
   "license": "OGL-UK-3.0",
   "dependencies": {
     "@hapi/h2o2": "^9.1.0",
