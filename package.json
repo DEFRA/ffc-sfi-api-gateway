@@ -25,7 +25,8 @@
     "blipp": "4.0.2",
     "hapi-pino": "8.3.0",
     "hapi-swagger": "17.1.0",
-    "joi": "17.4.0"
+    "joi": "17.4.0",
+    "log-timestamp": "0.3.0"
   },
   "devDependencies": {
     "jest": "29.7.0",
