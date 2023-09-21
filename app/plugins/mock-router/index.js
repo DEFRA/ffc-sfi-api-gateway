@@ -10,6 +10,7 @@ const lmsLandCoversWithGeo = require('./data/lms-land-covers-with-geo/5376393__S
 const lmsCoversSummary = require('./data/lms-covers-summary/5634600.json')
 const saAuth = require('./data/sa-authorisation/5841191.json')
 const saOrg = require('./data/sa-org/5841191.json')
+const saEntitlements = require('./data/sa-entitlements/5841191.json')
 const abacoApplications = require('./data/abaco-applications/response.json')
 const abacoSfiEligibility = require('./data/abaco-sfi-eligibility/response.json')
 const abacoSfiEligibilityParcels = require('./data/abaco-sfi-eligibility-parcels/response.json')
@@ -105,6 +106,13 @@ const routes = [
     path: '/SitiAgriApi/authorisation/organisation/{organisationId}/byFunction',
     handler: () => {
       return saOrg
+    }
+  },
+  {
+    method: 'get',
+    path: '/SitiAgriApi/entitlements/grouped/{organisationId}',
+    handler: () => {
+      return saEntitlements
     }
   },
   {
