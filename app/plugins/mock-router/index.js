@@ -8,6 +8,7 @@ const lmsParcels = require('./data/lms-parcels/5634600.json')
 const lmsLandCovers = require('./data/lms-land-covers/5376393.json')
 const lmsLandCoversWithGeo = require('./data/lms-land-covers-with-geo/5376393__SP8985__8277.json')
 const lmsCoversSummary = require('./data/lms-covers-summary/5634600.json')
+const lmsGeometries = require('./data/lms-geometries/5426800.json')
 const saAuth = require('./data/sa-authorisation/5841191.json')
 const saOrg = require('./data/sa-org/5841191.json')
 const saEntitlements = require('./data/sa-entitlements/5841191.json')
@@ -57,6 +58,20 @@ const routes = [
     path: '/organisation/search/sbi',
     handler: () => {
       return orgSearchSbi
+    }
+  },
+  {
+    method: 'get',
+    path: '/lms/organisation/{organisationId}/geometries',
+    handler: () => {
+      return lmsGeometries
+    },
+    options: {
+      validate: {
+        query: joi.object().keys({
+          bbox: joi.any().required()
+        }).required()
+      }
     }
   },
   {
