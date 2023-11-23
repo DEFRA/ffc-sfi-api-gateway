@@ -43,6 +43,9 @@ compose() {
 (
   cd "${projectRoot}"
 
+  # Ensure test-output folder exists
+  mkdir -p test-output
+
   # Guarantee clean environment
   compose down -v
 
@@ -50,7 +53,7 @@ compose() {
   compose build
 
   # Run tests
-  compose run ${service} ${command}
+  compose run --rm ${service} ${command}
 
   # Clean up
   compose down -v
