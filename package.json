@@ -20,7 +20,7 @@
     "@hapi/hoek": "11.0.2",
     "@hapi/inert": "7.1.0",
     "@hapi/vision": "7.0.3",
-    "@hapi/wreck": "18.0.1",
+    "@hapi/wreck": "18.1.0",
     "applicationinsights": "1.8.10",
     "blipp": "4.0.2",
     "hapi-pino": "8.3.0",
